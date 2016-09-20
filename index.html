@@ -1,0 +1,373 @@
+<html>
+<head>
+<meta charset="uft-8">
+	<title>Pokemon Cards Flip</title>
+</head>
+<style>
+body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form, fieldset, blockquote {
+	margin: 0; padding: 0; border: 0;
+}
+body {
+	background: #3f3f3f;
+	font-family: Helvetica, Arial, Sans-Serif;
+}
+h1 {
+	font-size: 50px; text-transform: uppercase; color: #717171;
+	text-shadow: 0 3px 3px #333; margin: 20px 0 0 0; text-align: center;
+}
+#browser {
+	margin: 0 auto; text-align:center;
+	text-shadow: 0 3px 3px #333;
+}
+#pokemon {
+	width: 750px; position: relative; margin: 0px;
+}
+.container {
+	width: 324px; height: 412px;
+	-webkit-perspective: 1000;
+}
+.container:hover .card {
+	-webkit-transform: rotateY(180deg);				
+}
+.face {
+	position: absolute;
+	-webkit-backface-visibility: hidden;
+}
+.front {
+	z-index: 10;
+}
+.container:hover .front {
+	z-index: 0;
+}
+.card {
+	width: 324px; height: 412px;
+	border: 8px solid #fff;	
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: 0.5s;
+}
+#backdim {
+	position:relative;
+	width:324px;
+	height:412px;
+	margin-right:-20px;
+	margin-top:-20px;
+}
+.card1 {
+	float: left; position: absolute; top: 10px; left: 20px;
+}
+	.card1 .front {
+
+	}
+	.card1 .back {
+		margin-left:0px;
+		width: 284px; height: 372px; padding: 20px;
+		-webkit-transform: rotateY(180deg);
+		background: #a3a3a3;
+	}
+	.card1 img {
+		float: right;
+	}
+	.card1 p {
+		float: left; width: 185px; margin: 0 0 20px 0;
+	}
+#card1dim {
+	width: 324px;
+	height:412px;
+}
+.card2 {
+	float: left; position: absolute; top: 10px; right: 30px;
+}
+	.card2 .front {
+
+	}
+	.card2 .back {
+		width: 284px; height: 372px; padding: 20px;
+		-webkit-transform: rotateY(180deg);
+		background: #a3a3a3;
+	}
+	.card2 img {
+		float: right;
+	}
+	.card2 p {
+		float: left; width: 185px; margin: 0 0 27px 0;
+	}
+#card2dim {
+	width: 324px;
+	height:412px;
+}
+.card3 {
+	float: left; position: absolute; top: 10px; right: -350px;
+}
+	.card3 .front {
+
+	}
+	.card3 .back {
+		width: 284px; height: 372px; padding: 20px;
+		-webkit-transform: rotateY(180deg);
+		background: #a3a3a3;
+	}
+	.card3 img {
+		float: right;
+	}
+	.card3 p {
+		float: left; width: 185px; margin: 0 0 27px 0;
+	}
+#card3dim {
+	width: 324px;
+	height:412px;
+}
+.card4 {
+	float: left; position: absolute; top: 10px; right: -730px;
+}
+	.card4 .front {
+
+	}
+	.card4 .back {
+		width: 284px; height: 372px; padding: 20px;
+		-webkit-transform: rotateY(180deg);
+		background: #a3a3a3;
+	}
+	.card4 img {
+		float: right;
+	}
+	.card4 p {
+		float: left; width: 185px; margin: 0 0 27px 0;
+	}
+#card4dim {
+	width: 324px;
+	height:412px;
+}
+.card5 {
+	float: left; position: absolute; top: 10px; right: -1110px;
+}
+	.card5 .front {
+
+	}
+	.card5 .back {
+		width: 284px; height: 372px; padding: 20px;
+		-webkit-transform: rotateY(180deg);
+		background: #a3a3a3;
+	}
+	.card5 img {
+		float: right;
+	}
+	.card5 p {
+		float: left; width: 185px; margin: 0 0 27px 0;
+	}
+#card5dim {
+	width: 324px;
+	height:412px;
+}
+.card6 {
+	float: left; position: absolute; top: 465px; left: 20px;
+}
+	.card6 .front {
+
+	}
+	.card6 .back {
+		margin-left:0px;
+		width: 284px; height: 372px; padding: 20px;
+		-webkit-transform: rotateY(180deg);
+		background: #a3a3a3;
+	}
+	.card6 img {
+		float: right;
+	}
+	.card6 p {
+		float: left; width: 185px; margin: 0 0 20px 0;
+	}
+#card6dim {
+	width: 324px;
+	height:412px;
+}
+.card7 {
+	float: left; position: absolute; top: 465px; right: 30px;
+}
+	.card7 .front {
+
+	}
+	.card7 .back {
+		width: 284px; height: 372px; padding: 20px;
+		-webkit-transform: rotateY(180deg);
+		background: #a3a3a3;
+	}
+	.card7 img {
+		float: right;
+	}
+	.card7 p {
+		float: left; width: 185px; margin: 0 0 27px 0;
+	}
+#card7dim {
+	width: 324px;
+	height:412px;
+}
+.card8 {
+	float: left; position: absolute; top: 465px; right: -350px;
+}
+	.card8 .front {
+
+	}
+	.card8 .back {
+		width: 284px; height: 372px; padding: 20px;
+		-webkit-transform: rotateY(180deg);
+		background: #a3a3a3;
+	}
+	.card8 img {
+		float: right;
+	}
+	.card8 p {
+		float: left; width: 185px; margin: 0 0 27px 0;
+	}
+#card8dim {
+	width: 324px;
+	height:412px;
+}
+.card9 {
+	float: left; position: absolute; top: 465px; right: -730px;
+}
+	.card9 .front {
+
+	}
+	.card9 .back {
+		width: 284px; height: 372px; padding: 20px;
+		-webkit-transform: rotateY(180deg);
+		background: #a3a3a3;
+	}
+	.card9 img {
+		float: right;
+	}
+	.card9 p {
+		float: left; width: 185px; margin: 0 0 27px 0;
+	}
+#card9dim {
+	width: 324px;
+	height:412px;
+}
+.card10 {
+	float: left; position: absolute; top: 465px; right: -1110px;
+}
+	.card10 .front {
+
+	}
+	.card10 .back {
+		width: 284px; height: 372px; padding: 20px;
+		-webkit-transform: rotateY(180deg);
+		background: #a3a3a3;
+	}
+	.card10 img {
+		float: right;
+	}
+	.card10 p {
+		float: left; width: 185px; margin: 0 0 27px 0;
+	}
+#card10dim {
+	width: 324px;
+	height:412px;
+}
+</style>
+<body>
+<h1>HTML / CSS / Web Development Questions</h1>
+<div id="pokemon">
+	<div class="container card1">
+		<div class="card">
+			<div class="face front">
+				<img id="card1dim" src="flashcard1.jpg" alt="Card 1">
+			</div>
+			<div class="face back">
+				<img id="backdim" src="flashcard1back.jpg" alt="Card Back">
+			</div>
+	 	</div>
+	</div>
+	<div class="container card2">
+		<div class="card">
+			<div class="face front">
+				<img id="card2dim" src="flashcard1.jpg" alt="Card 2">
+			</div>
+			<div class="face back">
+				<img id="backdim" src="flashcard1back.jpg" alt="Card Back">
+			</div>
+	 	</div>
+	</div>
+	<div class="container card3">
+		<div class="card">
+			<div class="face front">
+				<img id="card3dim" src="flashcard1.jpg" alt="Card 3">
+			</div>
+			<div class="face back">
+				<img id="backdim" src="flashcard1back.jpg" alt="Card Back">
+			</div>
+	 	</div>
+	</div>
+	<div class="container card4">
+		<div class="card">
+			<div class="face front">
+				<img id="card4dim" src="flashcard1.jpg" alt="Card 4">
+			</div>
+			<div class="face back">
+				<img id="backdim" src="flashcard1back.jpg" alt="Card Back">
+			</div>
+	 	</div>
+	</div>
+	<div class="container card5">
+		<div class="card">
+			<div class="face front">
+				<img id="card5dim" src="flashcard1.jpg" alt="Card 5">
+			</div>
+			<div class="face back">
+				<img id="backdim" src="flashcard1back.jpg" alt="Card Back">
+			</div>
+	 	</div>
+	</div>
+	<div class="container card6">
+		<div class="card">
+			<div class="face front">
+				<img id="card6dim" src="flashcard1.jpg" alt="Card 6">
+			</div>
+			<div class="face back">
+				<img id="backdim" src="flashcard1back.jpg" alt="Card Back">
+			</div>
+	 	</div>
+	</div>
+	<div class="container card7">
+		<div class="card">
+			<div class="face front">
+				<img id="card7dim" src="flashcard1.jpg" alt="Card 7">
+			</div>
+			<div class="face back">
+				<img id="backdim" src="flashcard1back.jpg" alt="Card Back">
+			</div>
+	 	</div>
+	</div>
+	<div class="container card8">
+		<div class="card">
+			<div class="face front">
+				<img id="card8dim" src="flashcard1.jpg" alt="Card 8">
+			</div>
+			<div class="face back">
+				<img id="backdim" src="flashcard1back.jpg" alt="Card Back">
+			</div>
+	 	</div>
+	</div>
+	<div class="container card9">
+		<div class="card">
+			<div class="face front">
+				<img id="card9dim" src="flashcard1.jpg" alt="Card 9">
+			</div>
+			<div class="face back">
+				<img id="backdim" src="flashcard1back.jpg" alt="Card Back">
+			</div>
+	 	</div>
+	</div>
+	<div class="container card10">
+		<div class="card">
+			<div class="face front">
+				<img id="card10dim" src="flashcard1.jpg" alt="Card 10">
+			</div>
+			<div class="face back">
+				<img id="backdim" src="flashcard1back.jpg" alt="Card Back">
+			</div>
+	 	</div>
+	</div>
+</div>
+</body>
+</html>
